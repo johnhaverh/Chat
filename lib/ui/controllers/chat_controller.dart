@@ -33,11 +33,11 @@ class ChatController extends GetxController {
 
     // TODO
      //newEntryStreamSubscription = databaseReference - child msg - child chatKey - listen
-     newEntryStreamSubscription = databaseReference.child('msg').child(chatKey).listen;
+     newEntryStreamSubscription = databaseReference.child('msg').child(chatKey).onChildChanged.listen((event) { });
 
     // TODO
     //  updateEntryStreamSubscription = databaseReference - child msg - child chatKey - listen
-    updateEntryStreamSubscription = databaseReference.child('msg').child(chatKey).listen;
+    updateEntryStreamSubscription = databaseReference.child('msg').child(chatKey).onChildChanged.listen((event) { });
   }
 
   // método en el que cerramos los streams
