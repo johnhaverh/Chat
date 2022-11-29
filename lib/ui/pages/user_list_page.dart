@@ -53,11 +53,11 @@ class _UserListPageState extends State<UserListPage> {
           Get.to(() => const ChatPage(), arguments: [
             element.uid,
             element.email,
+            element.avatar,
           ]);
         },
-        title: Text(
-          element.email,
-        ),
+        leading: CircleAvatar( radius: 20, backgroundImage: NetworkImage(element.avatar),),
+        title: Text( element.email, ),
         subtitle: Text(element.uid),
       ),
     );

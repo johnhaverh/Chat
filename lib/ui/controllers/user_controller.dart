@@ -8,7 +8,7 @@ import 'authentication_controller.dart';
 // Controlador usado para manejar los usuarios del chat
 class UserController extends GetxController {
   // lista en la que se almacenan los uaurios, la misma es observada por la UI
-  var _users = <AppUser>[].obs;
+  final _users = <AppUser>[].obs;
 
   final databaseRef = FirebaseDatabase.instance.ref();
 
@@ -64,13 +64,13 @@ class UserController extends GetxController {
   }
 
   // método para crear un nuevo usuario
-  Future<void> createUser(email, uid) async {
+  Future<void> createUser(email, uid, avatar) async {
     logInfo("Creating user in realTime for $email and $uid");
     try {
       await databaseRef
           .child('userList')
           .push()
-          .set({'email': email, 'uid': uid});
+          .set({'email': email, 'uid': uid, 'avatar': avatar});
     } catch (error) {
       logError(error);
       return Future.error(error);
