@@ -1,4 +1,4 @@
-# f_chat_template
+# Chat App MisionTic NRC2288 - Grupo 12
 
 Reto # 3
 
