@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -46,20 +49,12 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBVD1cDGsKQsLuY3qAvHaxzTfN9jmKG1cg',
-    appId: '1:396742496948:web:e694f9401c6f6c03cebde1',
-    messagingSenderId: '396742496948',
-    projectId: 'chatreto3mt',
-    authDomain: 'chatreto3mt.firebaseapp.com',
-    storageBucket: 'chatreto3mt.appspot.com',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCPxsAuZUltx1sDIGKjHinAhMStX3ypnfs',
     appId: '1:396742496948:android:9ea080eb03e70ab4cebde1',
     messagingSenderId: '396742496948',
     projectId: 'chatreto3mt',
+    databaseURL: 'https://chatreto3mt-default-rtdb.firebaseio.com',
     storageBucket: 'chatreto3mt.appspot.com',
   );
 
@@ -68,6 +63,7 @@ class DefaultFirebaseOptions {
     appId: '1:396742496948:ios:af7d70dfdfdeb5a0cebde1',
     messagingSenderId: '396742496948',
     projectId: 'chatreto3mt',
+    databaseURL: 'https://chatreto3mt-default-rtdb.firebaseio.com',
     storageBucket: 'chatreto3mt.appspot.com',
     iosClientId: '396742496948-g58mdrjeja8tr3eo7873noa1rd717kir.apps.googleusercontent.com',
     iosBundleId: 'com.example.fChatTemplate',

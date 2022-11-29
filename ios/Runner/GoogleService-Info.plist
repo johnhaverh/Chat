@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:396742496948:ios:af7d70dfdfdeb5a0cebde1</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatreto3mt-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
