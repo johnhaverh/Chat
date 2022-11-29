@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Firebase demo',
+        title: 'Firebase Chat MisionTic 2022',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

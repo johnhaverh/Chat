@@ -12,9 +12,9 @@ class AuthenticationPage extends StatelessWidget {
 
   void signIn() async {
     // aquí creamos los tres usuarios
-    await authenticationController.signup('a@a.com', '123456','https://drive.google.com/file/d/1UX5ddRdU1T_ikzaopVrRadQAlDBZj66t/view?usp=share_link',);
-    await authenticationController.signup('b@b.com', '123456','https://drive.google.com/file/d/1bWAaK8pvGt6b7Ju3oXrr_A8xOikiVGOi/view?usp=share_link',);
-    await authenticationController.signup('c@c.com', '123456','https://drive.google.com/file/d/143Bb7F6DiewlCclBHqZj-9nX-_wkkNRS/view?usp=share_link',);
+    await authenticationController.signup('persona1@mt2022.com', '123456','https://drive.google.com/file/d/1UX5ddRdU1T_ikzaopVrRadQAlDBZj66t/view?usp=share_link',);
+    await authenticationController.signup('persona2@mt2022.com', '123456','https://drive.google.com/file/d/1bWAaK8pvGt6b7Ju3oXrr_A8xOikiVGOi/view?usp=share_link',);
+    await authenticationController.signup('persona3@mt2022.com', '123456','https://drive.google.com/file/d/143Bb7F6DiewlCclBHqZj-9nX-_wkkNRS/view?usp=share_link',);
   }
 
   void login(String user) {
@@ -25,7 +25,7 @@ class AuthenticationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Chat App - Autenticación")),
+      appBar: AppBar(title: const Text("ChatApp - MisionTic - Grupo 12")),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -43,7 +43,7 @@ class AuthenticationPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           onPressed: signIn,
-                          child: const Text("Crear los tres usuarios"),
+                          child: const Text("Crear tres usuarios"),
                         ),
                       ),
                       const Padding(
@@ -72,14 +72,14 @@ class AuthenticationPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             ElevatedButton(
-                                onPressed: () => login('a@a.com'),
-                                child: const Text("Ingresar con usuario A")),
+                                onPressed: () => login('persona1@mt2022.com'),
+                                child: const Text("Ingresar con usuario Persona 1")),
                             ElevatedButton(
-                                onPressed: () => login('b@b.com'),
-                                child: const Text("Ingresar con usuario B")),
+                                onPressed: () => login('persona2@mt2022.com'),
+                                child: const Text("Ingresar con usuario Persona 2")),
                             ElevatedButton(
-                                onPressed: () => login('c@c.com'),
-                                child: const Text("Ingresar con usuario C")),
+                                onPressed: () => login('persona3@mt2022.com'),
+                                child: const Text("Ingresar con usuario Persona 3")),
                           ]),
                     ),
                   ),
