@@ -109,11 +109,15 @@ class ChatController extends GetxController {
   void initializeChats() {
     UserController userController = Get.find();
     List<AppUser> users = userController.allUsers();
-    createChat(users[0].uid, users[1].uid, users[0].uid, "Hola B, soy A");
-    createChat(users[1].uid, users[0].uid, users[1].uid, "Hola A, cómo estás?");
-    createChat(users[0].uid, users[2].uid, users[0].uid, "Hola C, soy A");
-    createChat(users[0].uid, users[2].uid, users[2].uid, "Hola A, Cómo estás?");
-    createChat(users[1].uid, users[2].uid, users[1].uid, "Hola C, soy B");
-    createChat(users[2].uid, users[1].uid, users[2].uid, "Todo bien B");
+    createChat(users[0].uid, users[1].uid, users[0].uid, "Hola Camilo, soy Alfredo");
+    createChat(users[1].uid, users[0].uid, users[1].uid, "Hola Alredo, cómo estás?");
+    createChat(users[0].uid, users[2].uid, users[0].uid, "Hola Edgar, soy Alfredo");
+    createChat(users[0].uid, users[2].uid, users[2].uid, "Hola Alfredo, Cómo estás?");
+    createChat(users[1].uid, users[2].uid, users[1].uid, "Hola Edgar, soy Camilo");
+    createChat(users[2].uid, users[1].uid, users[2].uid, "Todo bien Camilo");
+    createChat(users[3].uid, users[4].uid, users[3].uid, "Hola Miguel, soy John");
+    createChat(users[3].uid, users[4].uid, users[3].uid, "Todo bien?");
+    createChat(users[4].uid, users[3].uid, users[4].uid, "Hola John, si, todo muy bien");
+    createChat(users[4].uid, users[1].uid, users[4].uid, "Hola Camilo");
   }
 }

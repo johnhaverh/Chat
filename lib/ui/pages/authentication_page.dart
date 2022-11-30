@@ -12,9 +12,11 @@ class AuthenticationPage extends StatelessWidget {
 
   void signIn() async {
     // aquí creamos los tres usuarios
-    await authenticationController.signup('persona1@mt2022.com', '123456','https://drive.google.com/file/d/1UX5ddRdU1T_ikzaopVrRadQAlDBZj66t/view?usp=share_link',);
-    await authenticationController.signup('persona2@mt2022.com', '123456','https://drive.google.com/file/d/1bWAaK8pvGt6b7Ju3oXrr_A8xOikiVGOi/view?usp=share_link',);
-    await authenticationController.signup('persona3@mt2022.com', '123456','https://drive.google.com/file/d/143Bb7F6DiewlCclBHqZj-9nX-_wkkNRS/view?usp=share_link',);
+    await authenticationController.signup('alfredo@uninorte.edu.co', '123456','https://picsum.photos/100/100?image=602',);
+    await authenticationController.signup('camilo@uninorte.edu.co', '123456','https://picsum.photos/100/100?image=447',);
+    await authenticationController.signup('edgar@uninorte.edu.co', '123456','https://picsum.photos/100/100?image=331',);
+    await authenticationController.signup('john@uninorte.edu.co', '123456','https://picsum.photos/100/100?image=334',);
+    await authenticationController.signup('miguel@uninorte.edu.co', '123456','https://picsum.photos/100/100?image=349',);
   }
 
   void login(String user) {
@@ -26,7 +28,7 @@ class AuthenticationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("ChatApp - MisionTic - Grupo 12")),
-      body: SafeArea(
+      body:  SafeArea(
         child: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -43,7 +45,7 @@ class AuthenticationPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           onPressed: signIn,
-                          child: const Text("Crear tres usuarios"),
+                          child: const Text("Crear usuarios"),
                         ),
                       ),
                       const Padding(
@@ -72,19 +74,27 @@ class AuthenticationPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             ElevatedButton(
-                                onPressed: () => login('persona1@mt2022.com'),
-                                child: const Text("Ingresar con usuario Persona 1")),
+                                onPressed: () => login('alfredo@uninorte.edu.co'),
+                                child: const Text("Ingresar con usuario Alfredo")),
                             ElevatedButton(
-                                onPressed: () => login('persona2@mt2022.com'),
-                                child: const Text("Ingresar con usuario Persona 2")),
+                                onPressed: () => login('camilo@uninorte.edu.co'),
+                                child: const Text("Ingresar con usuario Camilo")),
                             ElevatedButton(
-                                onPressed: () => login('persona3@mt2022.com'),
-                                child: const Text("Ingresar con usuario Persona 3")),
-                          ]),
+                                onPressed: () => login('edgar@uninorte.edu.co'),
+                                child: const Text("Ingresar con usuario Edgar")),
+                            ElevatedButton(
+                                onPressed: () => login('john@uninorte.edu.co'),
+                                child: const Text("Ingresar con usuario John")),
+                            ElevatedButton(
+                                onPressed: () => login('miguel@uninorte.edu.co'),
+                                child: const Text("Ingresar con usuario Miguel")),
+                          ]
+                        ),
                     ),
                   ),
                 ),
-              ]),
+              ]
+          ),
         ),
       ),
     );
