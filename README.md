@@ -23,4 +23,6 @@ prompt_dialog: ^1.0.0
 
 firebase_database: ^10.0.6
 
-La siguiente imágen presenta un demo de la aplicación funcional:
+El siguiente video presenta un demo de la aplicación funcional:
+
+https://youtu.be/AapgAOTe8Ug
